@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta charset=UTF-8 />
+ </head>
+		<style type="text/css">
+			body {
+				background:#fdfdfd;
+			}
+
+			h4 {
+				font-size:14px;
+				color:red;
+				font-weight:bold;
+			}
+		
+		</style>
+ <body>
+
+<h4>01 显示 10*10 table表格</h4> 
+<br />
+
+		<script type="text/javascript">
+				
+				 
+			// 这里输出表格标签开始 <table>
+			document.write('<table border="1" width="800" align="center" cellspacing="0">')
+			
+
+			//循环1  行数循环  从0 开始 到9  共10行
+			for (a=0; a<10; a++)
+			{	
+
+				//这里输出表格行标签开始<tr>
+				//这里输出一次后需要 循环2 中 循环10次“1行” 后才会回到这边再重复写一次
+				document.write('<tr bgcolor="#cccccc">')
+
+
+				//循环2  列数循环  从0 开始 到9  共10列 
+				//每次++ 到9 后就跳出循环2
+				for (b=0; b<=9; b++)
+				{
+															
+				// 每个表格内写上 当前数字 “行变量a乘10 再加上列数”
+				// 例如： 第一行 变量是0   0*10+0=0    0*10+1=1  ......
+				// 例如： 第二行 变量是1   1*10+0=10   1*10+1=11  ......
+					document.write('<td>'+(a*10+b)+'</td>')
+				}
+
+				//这里输出表格行标签结束</tr>
+				//这里输出一次后需要 循环2 中 循环10次“1行” 后才会到这边写一次
+				document.write('</tr>')
+					
+			}
+
+			// 这里输出表格标签结束</table>
+			document.write('</table>')
+
+		</script>
+
+			</br>
+			</br>
+
+
+<h4>02 显示 10*10 table表格 隔行换色</h4>
+<br />
+
+		<script type="text/javascript">
+				
+				 
+			// 这里输出表格标签开始 <table>
+			document.write('<table border="1" width="800" align="center" cellspacing="0">')
+			
+
+			//循环1  行数循环  从0 开始 到9  共10行
+			for (a=0; a<10; a++)
+			{		
+
+					//判断 用当前行数变量除以 2 如果有余数的话 就 添加背景色 #cccccc
+					if (a%2==0)
+					{
+						// true 的场合
+						bgvar="#cccccc"
+					}else {
+						// false 的场合 其他颜色 或者空
+						bgvar=""
+					}
+				//这里输出表格行标签开始<tr>
+				//这里输出一次后需要 循环2 中 循环10次“1行” 后才会回到这边再重复写一次
+				//背景色使用 变量  使用方法!!!!：'+var+'
+				document.write('<tr bgcolor='+bgvar+'>')
+
+
+				//循环2  列数循环  从0 开始 到9  共10列 
+				//每次++ 到9 后就跳出循环2
+				for (b=0; b<=9; b++)
+				{
+										
+				// 每个表格内写上 当前数字 “行变量a乘10 再加上列数”
+				// 例如： 第一行 变量是0   0*10+0=0    0*10+1=1  ......
+				// 例如： 第二行 变量是1   1*10+0=10   1*10+1=11  ......
+					document.write('<td>'+(a*10+b)+'</td>')
+				}
+
+				//这里输出表格行标签结束</tr>
+				//这里输出一次后需要 循环2 中 循环10次“1行” 后才会到这边写一次
+				document.write('</tr>')
+					
+			}
+
+			// 这里输出表格标签结束</table>
+			document.write('</table>')
+
+		</script>
+ </body>
+</html>
