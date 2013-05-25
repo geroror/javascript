@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style>
+		h4{
+			font-size:14px;
+			color:red;
+			font-weight:bold;
+		}
+  
+  </style>
+ </head>
+
+ <body>
+		
+		<h4>/*  9 9 乘法表*/</br> *******************************************************************************</br></br></h4>
+		<script>
+				for (var x=1; x<=9; x++){
+					for (var y=1; y<=x; y++){
+						document.write(y+"*"+x+"="+(y*x)+"&nbsp"+"&nbsp")
+					}
+				
+				document.write("<br>")
+				
+				} 
+		
+		</script>
+		</br>
+
+		<h4>
+		*******************************************************************************</br>
+			实际目前内存 中 x 和 y  都是 10 。</br>
+			x 就不循环执行了 y 的话进去就重置了</br>
+			下方是JS</br>
+		*******************************************************************************</br></br>
+		</h4>
+		<script type="text/javascript">
+				document.write("目前内存x="+x+"&nbsp;&nbsp;"+"目前内存y="+y+"&nbsp;&nbsp;"+"x*y="+(x*y))
+
+				document.write("<br>")
+		</script>
+
+
+
+		<h4>
+		*******************************************************************************</br></br>
+		if break 终止循环 </br>
+		第1层 终止循环    </br> 
+		*******************************************************************************</br></br>
+		</h4>
+
+		<script>
+				for (var b=1; b<=9; b++){
+
+					/*break*/
+						if(b==5)
+								break;
+
+
+					for (var a=1; a<=b; a++){
+						
+						
+						document.write(a+"*"+b+"="+(a*b)+"&nbsp"+"&nbsp")
+					}
+				
+				document.write("<br>")
+				
+				} 
+		
+		</script>
+
+
+		<h4>
+		*******************************************************************************</br></br>
+		if break 终止循环 </br>
+		第2层 终止循环    </br> 
+		*******************************************************************************</br></br>
+		</h4>
+
+		<script>
+				for (var b=1; b<=9; b++){
+					for (var a=1; a<=b; a++){
+						/*break*/
+						if(a==5)
+								break;
+						
+						document.write(a+"*"+b+"="+(a*b)+"&nbsp"+"&nbsp")
+					}
+				
+				document.write("<br>")
+				
+				} 
+		
+		</script>
+
+
+		<h4>
+		*******************************************************************************</br></br>
+		 //做一个标记位 退出循环：</br>
+		*******************************************************************************</br></br>
+		</h4>
+		
+		
+		
+		<script>
+				st:
+				for (var b=1; b<=9; b++){
+					for (var a=1; a<=b; a++){
+						/*break*/
+						if(a==5)
+								break st;
+						
+						document.write(a+"*"+b+"="+(a*b)+"&nbsp"+"&nbsp")
+					}
+				
+				document.write("<br>")
+				
+				} 
+		
+		</script>
+
+
+		<h4>
+		*******************************************************************************</br></br>
+		 if continue：{ 花括号之内的程序将不执行 }</br>
+		 5 不显示</br>
+		*******************************************************************************</br></br>
+		</h4>
+		
+		<script>
+				for(var e=1; e<=10; e++){
+							
+						if(e==5)
+							continue;
+						document.write(e)
+						document.write("<br>")
+				
+				} 
+		
+		</script>
+
+		<h4>
+		*******************************************************************************</br></br>
+		比较奇怪的是</br>
+		目前 x=10 y=10  b=1~5 a=1~5 	</br>
+		document.write(b+"*"+a+"="+(b*a)+"&nbsp"+"&nbsp")</br>
+		document.write(x+"*"+y+"="+(b*a)+"&nbsp"+"&nbsp")</br>
+		如果 前面是 x 和 y 的话 后面括号里的 b*a  会变成 10*10 </br>
+		*******************************************************************************</br></br>
+		</h4>
+
+		<script>
+				for (var b=1; b<=9; b++){
+					/*break*/
+
+						if(b==5)
+								braek;
+
+					for (var a=1; a<=b; a++){
+						
+						document.write(b+"*"+a+"="+(b*a)+"&nbsp"+"&nbsp")
+					}
+				
+				document.write("<br>")
+				
+				} 
+		
+		</script>
+
+
+
+ </body>
+</html>

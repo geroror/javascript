@@ -1,0 +1,147 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+
+		
+			body{
+			background:#F3F3F3;
+			}
+	
+			h4{
+				font-size:14px;
+				color:blue;
+				font-weight:bold;
+			}
+		
+
+		</style>
+		<body>
+			<h4>
+			用 while 循环  输出 20 个table 表格 不换行一行显示
+			</h4>
+
+			<script type="text/javascript">
+				
+				document.write('<table border="1" align="center" cellspacing="0" width="800px">');
+				var a=1;
+				while (a<=20)
+				{
+					document.write('<td>'+a+'</td>')
+					a++;
+				}
+				document.write('</table>');
+			
+			</script>
+
+			<h4>
+			输出 100 个table 表格 每10个换行；
+			</h4>
+
+			<script type="text/javascript">
+				document.write('<table width="800px" border="1px" align="center">');
+
+					var b=0;
+						while (b<100)
+						{
+							if(b%10==0)
+							{
+								document.write('<tr>')
+							} 
+								document.write('<td>'+b+'</td>')
+
+								
+								b++;
+							
+							if(b%10==0)
+							{
+								document.write('<tr>')
+							} 
+
+							
+						}
+
+				document.write('</table>');
+			</script>
+
+
+
+			<h4>
+			 每10个换行  隔行换色；
+			</h4>
+
+			<script type="text/javascript">
+				document.write('<table width="800px" border="1px"  bordercolor="green" cellspacing="0" align="center">');
+
+					var b=0;
+						while (b<100)
+						{
+							if(b%10==0)
+							{
+								if(b%20==0)
+								{
+									bgcolor="#cccccc";
+								}else
+								{
+									bgcolor="#ffffff";
+								}								
+								document.write('<tr bgcolor="'+bgcolor+'">')
+							} 
+								document.write('<td>'+b+'</td>')
+
+								
+								b++;
+							
+							if(b%10==0)
+							{
+								document.write('<tr>')
+							} 
+
+							
+						}
+
+				document.write('</table>');
+			</script>
+
+			<h4>
+			 每10个换行  隔行换色；
+			</h4>
+			<script type="text/javascript">
+		
+		//table
+
+		document.write('<table width="800px" border="1px" cellspacing="0" align="center">');
+
+				var aa=0;
+				while (aa<100)
+				{
+					if (aa%10==0)
+					{	
+						if (aa%20==0)
+						{
+							bgvar="#D5D5D8"
+						}else{
+							bgvar="#F6F6F6"
+						}
+						document.write('<tr bgcolor='+bgvar+'>')
+					}
+
+					document.write('<td>'+aa+'</td>')
+					aa++;
+
+					if (aa%10==0)
+					{
+						document.write('</tr>')
+					}
+				}
+
+
+		document.write("</table>");
+		</script>	
+
+
+
+		</body>
+	</head>
+</html>
+
